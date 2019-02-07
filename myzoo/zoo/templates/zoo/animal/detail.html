@@ -1,0 +1,15 @@
+{% extends "zoo/base.html" %}
+{% load static %}
+
+{% block title %}
+  {{ animal.name }}
+{% endblock %}
+
+{% block content %}
+  <div class="product-detail">
+    <img style="text-align: right" src="{% if animal.image %}{{ animal.image.url }}{% else %}{% static 'zoo/img/no_image.png' %}{% endif %}">
+    <h1>{{ animal.name }}</h1>
+    <h2 style="text-align: right"><a href="{{ animal.category.get_absolute_url }}" class="nav-link">{{ animal.category }}</a></h2>
+    {{ animal.description|linebreaks }}
+  </div>
+{% endblock %}

@@ -1,0 +1,4 @@
+{
+    "_comment": "Utilizar python.pythonPath para apuntar a un entorno virtual",
+    "python.pythonPath": "~/.virtualenvs/envzoo/bin/python"
+}
